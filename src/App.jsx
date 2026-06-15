@@ -435,22 +435,22 @@ function generatePOTDProgression(seed) {
 // negative = borrowed: -1=♭VII, -2=♭VI, -3=♭III
 
 const TAG_COLORS = {
-  Pop:        {bg:"rgba(52,152,219,0.15)",  border:"rgba(52,152,219,0.45)",  text:"#5ba8e8"},
-  Rock:       {bg:"rgba(231,76,60,0.14)",   border:"rgba(231,76,60,0.45)",   text:"#e87c6c"},
-  Blues:      {bg:"rgba(32,178,170,0.14)",  border:"rgba(32,178,170,0.4)",   text:"#3fcfca"},
-  Jazz:       {bg:"rgba(142,68,173,0.17)",  border:"rgba(142,68,173,0.45)",  text:"#b57dd9"},
-  Country:    {bg:"rgba(243,156,18,0.14)",  border:"rgba(243,156,18,0.45)",  text:"#e8a83a"},
-  Cinematic:  {bg:"rgba(127,140,141,0.16)", border:"rgba(127,140,141,0.45)", text:"#a0b0b1"},
-  Melancholic:{bg:"rgba(108,92,231,0.16)",  border:"rgba(108,92,231,0.4)",   text:"#9d8ee8"},
-  Dark:       {bg:"rgba(120,40,40,0.2)",    border:"rgba(200,60,60,0.4)",    text:"#d0706a"},
-  "Alt-Rock": {bg:"rgba(230,126,34,0.14)",  border:"rgba(230,126,34,0.4)",   text:"#e89b5a"},
-  Ambient:    {bg:"rgba(52,195,235,0.13)",  border:"rgba(52,195,235,0.38)",  text:"#5ac8df"},
-  Classical:  {bg:"rgba(212,175,55,0.16)",  border:"rgba(212,175,55,0.4)",   text:"#d4b455"},
-  Nostalgic:  {bg:"rgba(201,153,80,0.16)",  border:"rgba(201,153,80,0.4)",   text:"#d4a860"},
-  Grunge:     {bg:"rgba(100,100,80,0.18)",  border:"rgba(140,140,100,0.4)",  text:"#b0b080"},
-  Gospel:     {bg:"rgba(241,196,15,0.15)",  border:"rgba(241,196,15,0.4)",   text:"#e8c830"},
-  Tense:      {bg:"rgba(192,57,43,0.17)",   border:"rgba(192,57,43,0.45)",   text:"#d97070"},
-  Flamenco:   {bg:"rgba(211,84,0,0.17)",    border:"rgba(211,84,0,0.45)",    text:"#e88030"},
+  Pop:        {bg:"rgba(85,130,185,0.11)",  border:"rgba(85,130,185,0.32)",  text:"#7aa0c4"},
+  Rock:       {bg:"rgba(175,70,55,0.12)",   border:"rgba(175,70,55,0.35)",   text:"#c06858"},
+  Blues:      {bg:"rgba(38,148,142,0.11)",  border:"rgba(38,148,142,0.32)",  text:"#3a9e9a"},
+  Jazz:       {bg:"rgba(112,52,78,0.14)",   border:"rgba(112,52,78,0.36)",   text:"#9a6275"},
+  Country:    {bg:"rgba(195,138,50,0.11)",  border:"rgba(195,138,50,0.35)",  text:"#c9913a"},
+  Cinematic:  {bg:"rgba(95,88,78,0.14)",    border:"rgba(95,88,78,0.36)",    text:"#857a6c"},
+  Melancholic:{bg:"rgba(82,80,148,0.12)",   border:"rgba(82,80,148,0.33)",   text:"#8280b8"},
+  Dark:       {bg:"rgba(95,38,38,0.16)",    border:"rgba(148,52,52,0.34)",   text:"#a86060"},
+  "Alt-Rock": {bg:"rgba(172,95,40,0.12)",   border:"rgba(172,95,40,0.34)",   text:"#b87840"},
+  Ambient:    {bg:"rgba(48,142,162,0.10)",  border:"rgba(48,142,162,0.30)",  text:"#48a0b8"},
+  Classical:  {bg:"rgba(178,148,48,0.12)",  border:"rgba(178,148,48,0.34)",  text:"#b09030"},
+  Nostalgic:  {bg:"rgba(162,122,68,0.13)",  border:"rgba(162,122,68,0.34)",  text:"#a88050"},
+  Grunge:     {bg:"rgba(88,84,68,0.15)",    border:"rgba(118,112,88,0.34)",  text:"#888068"},
+  Gospel:     {bg:"rgba(192,158,28,0.12)",  border:"rgba(192,158,28,0.34)",  text:"#c09818"},
+  Tense:      {bg:"rgba(148,50,40,0.13)",   border:"rgba(148,50,40,0.35)",   text:"#b05850"},
+  Flamenco:   {bg:"rgba(162,68,18,0.13)",   border:"rgba(162,68,18,0.35)",   text:"#b86828"},
 };
 
 const SUGGESTION_TEMPLATES = {
@@ -769,9 +769,9 @@ function getChordsInKey(root, mode) {
   }));
 }
 function qColors(q) {
-  if (q==="maj") return {bg:"rgba(52,152,219,0.13)",border:"rgba(52,152,219,0.3)",dot:"#3498db"};
-  if (q==="min") return {bg:"rgba(142,68,173,0.13)",border:"rgba(142,68,173,0.3)",dot:"#8e44ad"};
-  return {bg:"rgba(231,76,60,0.1)",border:"rgba(231,76,60,0.3)",dot:"#e74c3c"};
+  if (q==="maj") return {bg:"rgba(201,145,58,0.11)",border:"rgba(201,145,58,0.30)",dot:"#c9913a"};
+  if (q==="min") return {bg:"rgba(110,68,88,0.13)",border:"rgba(110,68,88,0.34)",dot:"#9e6a80"};
+  return {bg:"rgba(95,78,52,0.13)",border:"rgba(95,78,52,0.34)",dot:"#8a7048"};
 }
 
 const MOODS = [
@@ -1183,15 +1183,15 @@ function scalesForKey(root, mode) {
 
 // ── Design tokens ─────────────────────────────────────────────────────────────
 const T = {
-  bg:"#0c0c0e", line:"#201b14", lineSoft:"#181510",
-  text:"#e6ded2", dim:"#8d8475", faint:"#5a5244",
-  amber:"#d99a3d", amberBright:"#eebb66", amberSoft:"rgba(217,154,61,0.13)", amberBorder:"rgba(217,154,61,0.4)",
-  plum:"#8e44ad",
-  chord:"#d9de7d", chordDeep:"#a8ae45",
-  scaleTone:"#cf8a62", penta:"#6494d8", ghost:"rgba(228,221,202,0.35)",
-  card:"rgba(255,255,255,0.03)",
+  bg:"#0e0a07", line:"#261e13", lineSoft:"#1d1610",
+  text:"#e8ddd0", dim:"#9a8e7d", faint:"#5e5448",
+  amber:"#c9913a", amberBright:"#e8b45a", amberSoft:"rgba(201,145,58,0.12)", amberBorder:"rgba(201,145,58,0.38)",
+  plum:"#7a3a50",
+  chord:"#d0d45e", chordDeep:"#a2a63c",
+  scaleTone:"#c07848", penta:"#5a85c4", ghost:"rgba(218,210,192,0.30)",
+  card:"rgba(255,255,255,0.025)",
 };
-const SANS = "'Outfit','Inter',system-ui,sans-serif";
+const SANS = "'DM Sans','Inter',system-ui,sans-serif";
 const SERIF = "'Playfair Display',serif";
 const ITAL = "'Crimson Text',Georgia,serif";
 
@@ -1227,35 +1227,35 @@ function ChordDiagram({ voicing, chordName }) {
 
   return (
     <div style={{textAlign:"center"}}>
-      <div style={{fontSize:11,color:"#8e44ad",letterSpacing:1,marginBottom:6,textTransform:"uppercase"}}>{name}</div>
+      <div style={{fontSize:10,color:T.amber,letterSpacing:1.5,marginBottom:6,textTransform:"uppercase",fontFamily:SANS}}>{name}</div>
       <svg width={w} height={h} style={{display:"block",margin:"0 auto"}}>
         {/* Nut or base fret */}
         {displayBase === 1
-          ? <rect x={padL} y={padT-4} width={cellW*(cols-1)} height={5} fill="#e0d8d0" rx={2}/>
-          : <text x={padL-14} y={padT+cellH*0.6} fill="#888" fontSize={10} textAnchor="middle">{displayBase}</text>
+          ? <rect x={padL} y={padT-4} width={cellW*(cols-1)} height={5} fill="#d8cfc0" rx={2}/>
+          : <text x={padL-14} y={padT+cellH*0.6} fill={T.faint} fontSize={10} textAnchor="middle">{displayBase}</text>
         }
         {/* Fret lines */}
         {Array.from({length:numFrets+1},(_,i)=>(
-          <line key={i} x1={padL} y1={padT+i*cellH} x2={padL+cellW*(cols-1)} y2={padT+i*cellH} stroke="#2a2a2a" strokeWidth={i===0?2:1}/>
+          <line key={i} x1={padL} y1={padT+i*cellH} x2={padL+cellW*(cols-1)} y2={padT+i*cellH} stroke="#2c2418" strokeWidth={i===0?2:1}/>
         ))}
         {/* String lines */}
         {Array.from({length:cols},(_,i)=>(
-          <line key={i} x1={padL+i*cellW} y1={padT} x2={padL+i*cellW} y2={padT+numFrets*cellH} stroke="#3a3a3a" strokeWidth={1.5}/>
+          <line key={i} x1={padL+i*cellW} y1={padT} x2={padL+i*cellW} y2={padT+numFrets*cellH} stroke="#3a3028" strokeWidth={1.5}/>
         ))}
         {/* Barre */}
         {barre && (
-          <rect x={padL} y={padT+(barre-displayBase)*cellH+cellH*0.2} width={cellW*(cols-1)} height={cellH*0.55} fill="#8e44ad" rx={cellH*0.25} opacity={0.85}/>
+          <rect x={padL} y={padT+(barre-displayBase)*cellH+cellH*0.2} width={cellW*(cols-1)} height={cellH*0.55} fill={T.amber} rx={cellH*0.25} opacity={0.80}/>
         )}
         {/* Dots */}
         {frets.map((f,si) => {
           const x = padL + si*cellW;
-          if (f === -1) return <text key={si} x={x} y={padT-8} fill="#e74c3c" fontSize={13} textAnchor="middle">✕</text>;
-          if (f === 0) return <circle key={si} cx={x} cy={padT-10} r={5} fill="none" stroke="#666" strokeWidth={1.5}/>;
+          if (f === -1) return <text key={si} x={x} y={padT-8} fill="#a05840" fontSize={13} textAnchor="middle">✕</text>;
+          if (f === 0) return <circle key={si} cx={x} cy={padT-10} r={5} fill="none" stroke={T.faint} strokeWidth={1.5}/>;
           const fretRow = f - displayBase;
           if (fretRow < 0 || fretRow >= numFrets) return null;
           const y = padT + fretRow*cellH + cellH*0.5;
           const isBarreDot = barre && f===barre;
-          return <circle key={si} cx={x} cy={y} r={10} fill={isBarreDot?"transparent":"#8e44ad"} stroke="none"/>;
+          return <circle key={si} cx={x} cy={y} r={10} fill={isBarreDot?"transparent":T.amber} stroke="none"/>;
         })}
         {/* Finger numbers */}
         {fingers && frets.map((f,si) => {
@@ -1513,10 +1513,10 @@ function ChordTimeline({ progression, currentIdx, currentBeat, startBeats, isPla
               style={{
                 position:"relative", flexShrink:0,
                 minWidth: Math.max(96, beats * 11 + 22),
-                background: isActive ? "rgba(217,154,61,0.10)" : isSelected ? "rgba(217,154,61,0.06)" : "rgba(255,255,255,0.025)",
-                border:`1px solid ${isActive ? T.amberBorder : isSelected ? "rgba(217,154,61,0.28)" : T.line}`,
-                borderRadius:11, padding:"9px 11px 8px", cursor:"pointer",
-                boxShadow: isActive ? "0 0 16px rgba(217,154,61,0.16)" : "none",
+                background: isActive ? "rgba(201,145,58,0.10)" : isSelected ? "rgba(201,145,58,0.06)" : "rgba(255,255,255,0.022)",
+                border:`1px solid ${isActive ? T.amberBorder : isSelected ? "rgba(201,145,58,0.28)" : T.line}`,
+                borderRadius:13, padding:"10px 12px 9px", cursor:"pointer",
+                boxShadow: isActive ? "0 0 18px rgba(201,145,58,0.15)" : "none",
                 transition:"border-color 0.15s, background 0.15s, box-shadow 0.2s",
               }}>
               <button onClick={(e) => { e.stopPropagation(); onRemove(i); }}
@@ -1575,8 +1575,8 @@ function SpiceModal({ chord, capo, onClose, onAdd, audioCtxRef }) {
   return (
     <div style={{position:"fixed", inset:0, background:"rgba(5,4,2,0.86)", zIndex:100,
       display:"flex", alignItems:"flex-end", justifyContent:"center"}} onClick={onClose}>
-      <div style={{background:"#14110c", borderRadius:"18px 18px 0 0", width:"100%", maxWidth:520,
-        padding:"22px 18px 42px", border:`1px solid rgba(217,154,61,0.16)`, borderBottom:"none",
+      <div style={{background:"#13100c", borderRadius:"22px 22px 0 0", width:"100%", maxWidth:520,
+        padding:"26px 20px 48px", border:`1px solid rgba(201,145,58,0.16)`, borderBottom:"none",
         maxHeight:"88vh", overflowY:"auto"}} onClick={e => e.stopPropagation()}>
 
         {/* Header */}
@@ -1598,7 +1598,7 @@ function SpiceModal({ chord, capo, onClose, onAdd, audioCtxRef }) {
               color:"#1a1206", padding:"9px 14px", fontSize:13, cursor:"pointer",
               fontFamily:SERIF, fontWeight:700}}>▶ Play</button>
             <button onClick={() => { onAdd(activeName, chord); onClose(); }} style={{
-              background:"rgba(217,154,61,0.12)", border:`1px solid ${T.amberBorder}`, borderRadius:10,
+              background:"rgba(201,145,58,0.12)", border:`1px solid ${T.amberBorder}`, borderRadius:10,
               color:T.amberBright, padding:"9px 12px", fontSize:13, cursor:"pointer",
               fontFamily:SANS, fontWeight:600}}>＋ Add</button>
             <button onClick={onClose} aria-label="Close" style={{background:"rgba(255,255,255,0.05)",
@@ -1609,7 +1609,7 @@ function SpiceModal({ chord, capo, onClose, onAdd, audioCtxRef }) {
 
         {capo > 0 && (
           <div style={{fontSize:11.5, color:T.amber, fontFamily:SANS, marginBottom:10,
-            background:T.amberSoft, border:`1px solid rgba(217,154,61,0.25)`, borderRadius:8,
+            background:T.amberSoft, border:`1px solid rgba(201,145,58,0.25)`, borderRadius:8,
             padding:"6px 10px"}}>
             Capo {capo} — sound a {activeName} by playing a <b>{shapeName}</b> shape:
           </div>
@@ -1684,7 +1684,7 @@ function SpiceModal({ chord, capo, onClose, onAdd, audioCtxRef }) {
                       <div style={{fontFamily:SERIF, fontSize:13.5, fontWeight:700, color:T.text}}>{vName}</div>
                       <button onClick={(e) => { e.stopPropagation(); playChord(vName, audioCtxRef); }}
                         aria-label={`Play ${vName}`}
-                        style={{background:"rgba(217,154,61,0.14)", border:`1px solid rgba(217,154,61,0.3)`,
+                        style={{background:"rgba(201,145,58,0.14)", border:`1px solid rgba(201,145,58,0.3)`,
                           borderRadius:5, color:T.amber, padding:"2px 7px", fontSize:11,
                           cursor:"pointer", flexShrink:0}}>▶</button>
                     </div>
@@ -1735,7 +1735,7 @@ Short, punchy, exciting.`}],
     <div style={{marginTop:16}}>
       <button onClick={analyze} disabled={loading || !progression.length} style={{
         width:"100%", padding:"13px 0",
-        background: progression.length ? `linear-gradient(135deg, #b3742a, ${T.plum})` : "#1a1812",
+        background: progression.length ? `linear-gradient(135deg, ${T.amber}, #7a3a50)` : "#1a1610",
         border:"none", borderRadius:10, color:"#fff",
         fontFamily:SERIF, fontSize:15, fontWeight:700, letterSpacing:1,
         cursor: progression.length ? "pointer" : "not-allowed", opacity: progression.length ? 1 : 0.4,
@@ -1863,8 +1863,8 @@ function DecodeTab({ audioCtxRef, onApply, onSoloScale }) {
 
   return (
     <div>
-      <div style={{fontFamily:SERIF, fontSize:19, fontWeight:700, marginBottom:4}}>What key am I in?</div>
-      <div style={{fontSize:13, color:T.dim, fontFamily:ITAL, fontStyle:"italic", marginBottom:14}}>
+      <div style={{fontFamily:SERIF, fontSize:20, fontWeight:700, marginBottom:10, letterSpacing:0.1}}>What key am I in?</div>
+      <div style={{fontSize:12, color:T.faint, fontFamily:ITAL, fontStyle:"italic", marginBottom:20, opacity:0.75, lineHeight:1.55}}>
         Already jamming on some chords but don't know why they work? Type 2–4 of them and I'll decode it.
       </div>
 
@@ -1897,7 +1897,7 @@ function DecodeTab({ audioCtxRef, onApply, onSoloScale }) {
       )}
 
       {result && !result.error && (
-        <div style={{background:T.card, border:`1px solid rgba(217,154,61,0.2)`, borderRadius:14,
+        <div style={{background:T.card, border:`1px solid rgba(201,145,58,0.2)`, borderRadius:14,
           padding:"16px 16px 18px"}}>
           {/* Verdict */}
           <div style={{fontSize:9.5, letterSpacing:2.5, color:T.amber, textTransform:"uppercase",
@@ -1929,7 +1929,7 @@ function DecodeTab({ audioCtxRef, onApply, onSoloScale }) {
             <div key={i} style={{display:"flex", alignItems:"center", gap:10, padding:"7px 0",
               borderBottom: i < result.perChord.length-1 ? `1px solid ${T.lineSoft}` : "none"}}>
               <button onClick={() => playChord(c.token, audioCtxRef)} style={{
-                background:"rgba(217,154,61,0.1)", border:`1px solid rgba(217,154,61,0.25)`,
+                background:"rgba(201,145,58,0.10)", border:`1px solid rgba(201,145,58,0.25)`,
                 borderRadius:6, color:T.amber, width:26, height:26, fontSize:11, cursor:"pointer",
                 flexShrink:0}}>▶</button>
               <div style={{fontFamily:SERIF, fontSize:15.5, fontWeight:700, minWidth:52}}>{c.token}</div>
@@ -2022,9 +2022,9 @@ function Transport({ isPlaying, onPlay, onStop, bpm, setBpm, onTap, tapFlash, ha
   return (
     <div style={{display:"flex", alignItems:"center", gap:8, flexWrap:"wrap"}}>
       <button onClick={isPlaying ? onStop : onPlay} disabled={!hasChords} style={{
-        background: isPlaying ? "rgba(231,76,60,0.16)" : hasChords ? `linear-gradient(135deg, ${T.amber}, #a8702a)` : "#17140f",
-        border: isPlaying ? "1px solid rgba(231,76,60,0.5)" : "none",
-        borderRadius:9, color: isPlaying ? "#e88" : hasChords ? "#1a1206" : T.faint,
+        background: isPlaying ? "rgba(201,145,58,0.15)" : hasChords ? `linear-gradient(135deg, ${T.amber}, #a8702a)` : "#17140f",
+        border: isPlaying ? `1px solid ${T.amberBorder}` : "none",
+        borderRadius:10, color: isPlaying ? T.amberBright : hasChords ? "#1a1206" : T.faint,
         padding:"9px 18px", fontSize:13.5, cursor: hasChords ? "pointer" : "not-allowed",
         fontFamily:SERIF, fontWeight:700, letterSpacing:0.5, opacity: hasChords ? 1 : 0.6}}>
         {isPlaying ? "■ Stop" : "▶ Play All"}
@@ -2128,10 +2128,10 @@ function FreePlayBrowser({
               const isMinorish = v.startsWith("m") && !v.startsWith("maj");
               const isDim = v.startsWith("dim") || v === "m7b5";
               const colors = isDim
-                ? {bg:"rgba(231,76,60,0.07)", border:"rgba(231,76,60,0.25)", dot:"#e74c3c"}
+                ? {bg:"rgba(95,78,52,0.10)", border:"rgba(95,78,52,0.30)", dot:"#8a7048"}
                 : isMinorish
-                  ? {bg:"rgba(142,68,173,0.09)", border:"rgba(142,68,173,0.25)", dot:"#8e44ad"}
-                  : {bg:"rgba(52,152,219,0.08)", border:"rgba(52,152,219,0.22)", dot:"#3498db"};
+                  ? {bg:"rgba(110,68,88,0.10)", border:"rgba(110,68,88,0.30)", dot:"#9e6a80"}
+                  : {bg:"rgba(201,145,58,0.09)", border:"rgba(201,145,58,0.26)", dot:"#c9913a"};
               const chordObj = {
                 name: chordName, displayName: chordName, playName: chordName,
                 root, quality: isDim ? "dim" : isMinorish ? "min" : "maj",
@@ -2325,9 +2325,9 @@ function SaveButton({ onSave, style }) {
 }
 
 // ── Spice One Chord component ─────────────────────────────────────────────────
-const PLUM  = "#8e44ad";
-const PLUM_L = "#c39be8";
-const PLUM_D = "#6d3085";
+const PLUM  = "#7a3a50";
+const PLUM_L = T.amberBright;
+const PLUM_D = "#5a2a38";
 
 function SpiceOneChord({ progression, keyRoot, mode, audioCtxRef, onSave }) {
   const [active, setActive] = useState(false);
@@ -2369,10 +2369,10 @@ function SpiceOneChord({ progression, keyRoot, mode, audioCtxRef, onSave }) {
     return (
       <button onClick={() => launch()} style={{
         marginTop:10,
-        padding:"7px 14px", borderRadius:8, fontSize:12, cursor:"pointer",
-        background:`rgba(142,68,173,0.08)`,
-        border:`1px solid rgba(142,68,173,0.35)`,
-        color:PLUM_L, fontFamily:SANS, fontWeight:500,
+        padding:"7px 14px", borderRadius:9, fontSize:12, cursor:"pointer",
+        background:T.amberSoft,
+        border:`1px solid ${T.amberBorder}`,
+        color:T.amberBright, fontFamily:SANS, fontWeight:500,
         transition:"all 0.15s",
       }}>
         ✦ Spice One Chord
@@ -2385,15 +2385,15 @@ function SpiceOneChord({ progression, keyRoot, mode, audioCtxRef, onSave }) {
   return (
     <div style={{
       marginTop:10,
-      background:`rgba(142,68,173,0.06)`,
-      border:`1px solid rgba(142,68,173,0.28)`,
-      borderRadius:12, padding:"13px 14px",
+      background:`rgba(201,145,58,0.05)`,
+      border:`1px solid ${T.amberBorder}`,
+      borderRadius:13, padding:"14px 15px",
     }}>
       {/* Header */}
       <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:11, flexWrap:"wrap", gap:7}}>
         <div style={{fontSize:12, color:T.dim}}>
           Spicing{" "}
-          <span style={{color:PLUM_L, fontFamily:SERIF, fontWeight:700}}>
+          <span style={{color:T.amberBright, fontFamily:SERIF, fontWeight:700}}>
             {target?.displayName || target?.name}
           </span>
           {progression.length > 1 && (
@@ -2402,12 +2402,12 @@ function SpiceOneChord({ progression, keyRoot, mode, audioCtxRef, onSave }) {
         </div>
         <div style={{display:"flex", gap:6}}>
           <button onClick={tryAnother} style={{
-            padding:"4px 10px", borderRadius:6, fontSize:11, cursor:"pointer",
-            background:`rgba(142,68,173,0.1)`, border:`1px solid rgba(142,68,173,0.32)`,
-            color:PLUM_L,
+            padding:"4px 10px", borderRadius:7, fontSize:11, cursor:"pointer",
+            background:T.amberSoft, border:`1px solid ${T.amberBorder}`,
+            color:T.amberBright,
           }}>↻ Try Another</button>
           <button onClick={close} style={{
-            padding:"4px 10px", borderRadius:6, fontSize:11, cursor:"pointer",
+            padding:"4px 10px", borderRadius:7, fontSize:11, cursor:"pointer",
             background:"transparent", border:`1px solid ${T.lineSoft}`, color:T.faint,
           }}>✕ Restore</button>
         </div>
@@ -2424,13 +2424,13 @@ function SpiceOneChord({ progression, keyRoot, mode, audioCtxRef, onSave }) {
             const spiced = buildSpiced(opt);
             return (
               <div key={oi} style={{
-                background:"rgba(255,255,255,0.025)",
-                border:`1px solid rgba(142,68,173,0.18)`,
-                borderRadius:9, padding:"10px 12px",
+                background:"rgba(255,255,255,0.022)",
+                border:`1px solid ${T.line}`,
+                borderRadius:10, padding:"10px 12px",
               }}>
                 {/* Label */}
                 <div style={{marginBottom:7}}>
-                  <span style={{fontSize:11.5, color:PLUM_L, fontWeight:600}}>{opt.label}</span>
+                  <span style={{fontSize:11.5, color:T.amberBright, fontWeight:600}}>{opt.label}</span>
                   <span style={{fontSize:10.5, color:T.faint, marginLeft:8, fontFamily:ITAL, fontStyle:"italic"}}>{opt.feel}</span>
                 </div>
                 {/* Full progression with spiced chord highlighted */}
@@ -2441,17 +2441,17 @@ function SpiceOneChord({ progression, keyRoot, mode, audioCtxRef, onSave }) {
                     return (
                       <div key={ci} style={{display:"flex", alignItems:"center", gap:3}}>
                         <button onClick={() => playChord(ch.playName, audioCtxRef)} style={{
-                          borderRadius:8, padding:"5px 9px", cursor:"pointer", textAlign:"center",
-                          background: isSpiced ? `rgba(142,68,173,0.22)` : qc.bg,
-                          border: isSpiced ? `1px solid rgba(142,68,173,0.65)` : `1px solid ${qc.border}`,
-                          boxShadow: isSpiced ? `0 0 10px rgba(142,68,173,0.28)` : "none",
+                          borderRadius:9, padding:"5px 9px", cursor:"pointer", textAlign:"center",
+                          background: isSpiced ? T.amberSoft : qc.bg,
+                          border: isSpiced ? `1px solid ${T.amberBorder}` : `1px solid ${qc.border}`,
+                          boxShadow: isSpiced ? `0 0 10px rgba(201,145,58,0.22)` : "none",
                           transition:"all 0.15s",
                         }}>
                           <div style={{
                             fontFamily:SERIF, fontSize:13, fontWeight:700,
-                            color: isSpiced ? PLUM_L : T.text,
+                            color: isSpiced ? T.amberBright : T.text,
                           }}>{ch.displayName}</div>
-                          <div style={{fontSize:9, color: isSpiced ? "#9d70c0" : T.amber, marginTop:1}}>
+                          <div style={{fontSize:9, color: isSpiced ? T.amber : T.amber, marginTop:1}}>
                             {ch.numeral}
                           </div>
                         </button>
@@ -2745,58 +2745,53 @@ function ProgressionOfTheDay({ audioCtxRef, onLoad, capo, onSave }) {
 
   return (
     <div style={{
-      borderRadius:16,
+      borderRadius:18,
       border:`1px solid ${glowFlash ? T.amber : T.amberBorder}`,
-      background:`linear-gradient(145deg, rgba(217,154,61,0.08) 0%, rgba(142,68,173,0.05) 50%, rgba(217,154,61,0.04) 100%)`,
-      padding:"18px 16px 16px",
-      marginBottom:20,
+      background:`linear-gradient(145deg, rgba(201,145,58,0.08) 0%, rgba(122,58,80,0.04) 55%, rgba(201,145,58,0.04) 100%)`,
+      padding:"22px 20px 20px",
+      marginBottom:32,
       boxShadow: glowFlash
-        ? `0 0 32px rgba(217,154,61,0.30), inset 0 0 0 1px rgba(217,154,61,0.15)`
-        : `0 0 24px rgba(217,154,61,0.12), inset 0 0 0 1px rgba(217,154,61,0.06)`,
+        ? `0 0 32px rgba(201,145,58,0.28), inset 0 0 0 1px rgba(201,145,58,0.14)`
+        : `0 0 24px rgba(201,145,58,0.10), inset 0 0 0 1px rgba(201,145,58,0.05)`,
       transition:"box-shadow 0.25s, border-color 0.25s",
     }}>
       {/* Header row */}
-      <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:10}}>
-        <div style={{display:"flex", alignItems:"center", gap:8}}>
-          <div style={{
-            fontSize:8.5, letterSpacing:3.5, color:T.amber, textTransform:"uppercase",
-            fontWeight:700, fontFamily:SANS,
-          }}>
-            {isToday ? "Today's Progression" : "Fresh Pick"}
-          </div>
+      <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:16}}>
+        <div style={{
+          fontSize:8, letterSpacing:3, color:T.amber, textTransform:"uppercase",
+          fontWeight:500, fontFamily:SANS, opacity:0.75,
+        }}>
+          {isToday ? "Today's Progression" : "Fresh Pick"}
         </div>
         <div style={{
-          fontSize:10.5, color:T.faint, fontFamily:ITAL, fontStyle:"italic",
-          background:"rgba(255,255,255,0.04)", borderRadius:5, padding:"2px 8px",
-          border:`1px solid ${T.lineSoft}`,
+          fontSize:9.5, color:T.faint, fontFamily:SANS, opacity:0.65,
         }}>
           {dn(keyRoot)} {mode} · {genreId}
         </div>
       </div>
 
-      {/* Vibe headline */}
+      {/* Vibe headline — the hero */}
       <div style={{
-        fontFamily:SERIF, fontSize:20, fontWeight:900, marginBottom:14, lineHeight:1.15,
-        background:`linear-gradient(120deg, ${T.text} 30%, ${T.amberBright} 100%)`,
-        WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent",
+        fontFamily:SERIF, fontSize:24, fontWeight:900, marginBottom:20, lineHeight:1.12,
+        color:T.text,
       }}>
         {vibe}
       </div>
 
       {/* Chord chips */}
-      <div style={{display:"flex", flexWrap:"wrap", gap:7, marginBottom:14}}>
+      <div style={{display:"flex", flexWrap:"wrap", gap:6, marginBottom:22}}>
         {progression.map((ch, i) => {
           const qc = qColors(ch.quality);
           const dispName = capo > 0 ? fingeredName(ch.displayName, capo) : ch.displayName;
           return (
             <button key={i} onClick={() => playChord(ch.playName, audioCtxRef)} style={{
               background:qc.bg, border:`1px solid ${qc.border}`,
-              borderRadius:9, padding:"7px 13px", cursor:"pointer",
+              borderRadius:9, padding:"6px 12px", cursor:"pointer",
               display:"flex", flexDirection:"column", alignItems:"center", gap:2,
               transition:"opacity 0.1s",
             }}>
-              <span style={{fontFamily:SERIF, fontSize:15, fontWeight:700, color:T.text}}>{dispName}</span>
-              <span style={{fontSize:10, color:T.faint, fontFamily:SANS}}>{ch.numeral}</span>
+              <span style={{fontFamily:SERIF, fontSize:14, fontWeight:700, color:T.text}}>{dispName}</span>
+              <span style={{fontSize:9, color:T.faint, fontFamily:SANS, opacity:0.8}}>{ch.numeral}</span>
             </button>
           );
         })}
@@ -2804,7 +2799,7 @@ function ProgressionOfTheDay({ audioCtxRef, onLoad, capo, onSave }) {
 
       {/* Primary CTA */}
       <button onClick={() => onLoad(keyRoot, mode, progression)} style={{
-        width:"100%", padding:"13px 0", borderRadius:10, marginBottom:9,
+        width:"100%", padding:"14px 0", borderRadius:10, marginBottom:10,
         background:`linear-gradient(135deg, ${T.amber}, #a8702a)`,
         border:"none", color:"#1a1206",
         fontSize:15, cursor:"pointer", fontWeight:700, fontFamily:SERIF,
@@ -2949,7 +2944,7 @@ function SuggestionsPanel({ activeChordName, keyRoot, mode, audioCtxRef, onLoadP
       {/* Out-of-key notice */}
       {notInKey && naturalHome && (
         <div style={{
-          background:"rgba(217,154,61,0.07)", border:`1px solid ${T.amberBorder}`,
+          background:"rgba(201,145,58,0.07)", border:`1px solid ${T.amberBorder}`,
           borderRadius:8, padding:"8px 12px", marginBottom:12,
           fontSize:11, color:T.dim, fontFamily:ITAL, fontStyle:"italic",
         }}>
@@ -3013,7 +3008,7 @@ function SuggestionsPanel({ activeChordName, keyRoot, mode, audioCtxRef, onLoadP
                   )}
                   <button onClick={() => { onLoadProgression(prog); setExpanded(false); }} style={{
                     flex:1, padding:"6px 12px",
-                    background:`linear-gradient(135deg, rgba(217,154,61,0.14), rgba(168,112,42,0.14))`,
+                    background:`linear-gradient(135deg, rgba(201,145,58,0.14), rgba(168,112,42,0.14))`,
                     border:`1px solid ${T.amberBorder}`, borderRadius:7,
                     color:T.amberBright, fontSize:12, cursor:"pointer", fontFamily:SERIF, fontWeight:600,
                   }}>→ Send to Builder</button>
@@ -3107,8 +3102,8 @@ function ProgressionGenerator({ keyRoot, mode, audioCtxRef, onLoadProgression, c
       </div>
 
       {/* Genre */}
-      <div style={{marginBottom:14}}>
-        <div style={{fontSize:9.5, letterSpacing:3, color:T.faint, textTransform:"uppercase", marginBottom:8}}>Genre / Vibe</div>
+      <div style={{marginBottom:18}}>
+        <div style={{fontSize:9, letterSpacing:2.5, color:T.faint, textTransform:"uppercase", marginBottom:10, opacity:0.65}}>Genre / Vibe</div>
         <div style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:5}}>
           {PROG_GENRES.map(g => (
             <button key={g.id} onClick={() => setGenre(g.id)} style={{
@@ -3125,8 +3120,8 @@ function ProgressionGenerator({ keyRoot, mode, audioCtxRef, onLoadProgression, c
       </div>
 
       {/* Mood */}
-      <div style={{marginBottom:14}}>
-        <div style={{fontSize:9.5, letterSpacing:3, color:T.faint, textTransform:"uppercase", marginBottom:8}}>Mood</div>
+      <div style={{marginBottom:18}}>
+        <div style={{fontSize:9, letterSpacing:2.5, color:T.faint, textTransform:"uppercase", marginBottom:10, opacity:0.65}}>Mood</div>
         <div style={{display:"grid", gridTemplateColumns:"repeat(3, 1fr)", gap:5}}>
           {PROG_MOODS.map(m => (
             <button key={m.id} onClick={() => setMood(m.id)} style={{
@@ -3141,8 +3136,8 @@ function ProgressionGenerator({ keyRoot, mode, audioCtxRef, onLoadProgression, c
       </div>
 
       {/* Complexity */}
-      <div style={{marginBottom:22}}>
-        <div style={{fontSize:9.5, letterSpacing:3, color:T.faint, textTransform:"uppercase", marginBottom:8}}>Complexity</div>
+      <div style={{marginBottom:28}}>
+        <div style={{fontSize:9, letterSpacing:2.5, color:T.faint, textTransform:"uppercase", marginBottom:10, opacity:0.65}}>Complexity</div>
         <div style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:5}}>
           {[
             {id:"simple",       label:"Simple",       desc:"Clean triads"},
@@ -3172,8 +3167,8 @@ function ProgressionGenerator({ keyRoot, mode, audioCtxRef, onLoadProgression, c
         fontFamily:SERIF, fontSize:20, fontWeight:900, letterSpacing:2,
         color:"#1a1206",
         boxShadow: flash
-          ? `0 0 28px rgba(217,154,61,0.65), 0 4px 20px rgba(0,0,0,0.5)`
-          : `0 4px 16px rgba(0,0,0,0.45), 0 0 0 1px rgba(217,154,61,0.18)`,
+          ? `0 0 28px rgba(201,145,58,0.55), 0 4px 20px rgba(0,0,0,0.5)`
+          : `0 4px 16px rgba(0,0,0,0.45), 0 0 0 1px rgba(201,145,58,0.18)`,
         transform: flash ? "scale(0.98)" : "scale(1)",
         transition:"all 0.15s",
       }}>
@@ -3183,7 +3178,7 @@ function ProgressionGenerator({ keyRoot, mode, audioCtxRef, onLoadProgression, c
       {/* Output */}
       {generated.length > 0 && (
         <div style={{
-          background:"rgba(217,154,61,0.05)",
+          background:"rgba(201,145,58,0.05)",
           border:`1px solid ${T.amberBorder}`,
           borderRadius:12, padding:16, marginBottom:10,
         }}>
@@ -3237,7 +3232,7 @@ function ProgressionGenerator({ keyRoot, mode, audioCtxRef, onLoadProgression, c
             )}
             <button onClick={() => onLoadProgression(generated)} style={{
               flex:1, padding:"9px 14px",
-              background:`linear-gradient(135deg, rgba(217,154,61,0.18), rgba(168,112,42,0.18))`,
+              background:`linear-gradient(135deg, rgba(201,145,58,0.18), rgba(168,112,42,0.18))`,
               border:`1px solid ${T.amberBorder}`, borderRadius:8,
               color:T.amberBright, fontSize:13, fontWeight:600,
               fontFamily:SERIF, cursor:"pointer",
@@ -3358,7 +3353,7 @@ function SavedProgressions({ saved, onRemove, onLoad, audioCtxRef, onSave }) {
             </button>
             <button onClick={() => onLoad(entry)} style={{
               flex:1, padding:"6px 13px", borderRadius:7, fontSize:12, cursor:"pointer",
-              background:`linear-gradient(135deg, rgba(217,154,61,0.14), rgba(168,112,42,0.14))`,
+              background:`linear-gradient(135deg, rgba(201,145,58,0.14), rgba(168,112,42,0.14))`,
               border:`1px solid ${T.amberBorder}`, color:T.amberBright,
               fontFamily:SERIF, fontWeight:600,
             }}>→ Load</button>
@@ -3559,7 +3554,7 @@ export default function App() {
   return (
     <div style={{minHeight:"100vh", background:T.bg, fontFamily:SANS, color:T.text, paddingBottom:64}}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
         *{box-sizing:border-box;margin:0;padding:0}
         button{font-family:inherit}
         ::-webkit-scrollbar{width:3px;height:3px}
@@ -3572,31 +3567,28 @@ export default function App() {
       `}</style>
 
       {/* ── Header ── */}
-      <div style={{padding:"22px 20px 14px", borderBottom:`1px solid ${T.lineSoft}`,
-        background:`linear-gradient(180deg, rgba(217,154,61,0.06) 0%, transparent 100%)`}}>
-        <div style={{fontSize:9.5, letterSpacing:4, color:T.amber, textTransform:"uppercase", marginBottom:4, fontFamily:SANS, fontWeight:600}}>
+      <div style={{padding:"26px 22px 16px", borderBottom:`1px solid ${T.lineSoft}`,
+        background:`linear-gradient(180deg, rgba(201,145,58,0.05) 0%, transparent 100%)`}}>
+        <div style={{fontSize:9, letterSpacing:5, color:T.amber, textTransform:"uppercase", marginBottom:6, fontFamily:SANS, fontWeight:500, opacity:0.85}}>
           Guitar practice &amp; theory
         </div>
-        <div style={{fontFamily:SERIF, fontSize:28, fontWeight:900, lineHeight:1.08,
-          background:`linear-gradient(135deg, ${T.text} 30%, ${T.amber})`,
-          WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent"}}>
+        <div style={{fontFamily:SERIF, fontSize:30, fontWeight:900, lineHeight:1.05, letterSpacing:-0.5,
+          color:T.text}}>
           The Woodshed
         </div>
-        <div style={{width:64, height:3, marginTop:7, borderRadius:2,
-          background:`repeating-linear-gradient(90deg, ${T.amber} 0 6px, rgba(217,154,61,0.25) 6px 9px)`}}/>
         {screen === "mood" && (
-          <div style={{fontSize:12.5, color:T.dim, fontFamily:ITAL, fontStyle:"italic", marginTop:9, lineHeight:1.45}}>
+          <div style={{fontSize:13, color:T.dim, fontFamily:ITAL, fontStyle:"italic", marginTop:11, lineHeight:1.55}}>
             Build progressions, explore chord colors, and find what to play over them.
           </div>
         )}
         {screen === "build" && (
           <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", marginTop:10}}>
-            <div style={{fontSize:12.5, color:T.dim, fontStyle:"italic", fontFamily:ITAL}}>
+            <div style={{fontSize:13, color:T.dim, fontStyle:"italic", fontFamily:ITAL}}>
               {freePlay ? "Free Play — no key" : `${dn(key)} ${mode}`}
             </div>
             <button onClick={() => { stop(); setScreen("mood"); setProgression([]); setFreePlay(false); setShowChordLibrary(false); }} style={{
-              background:"transparent", border:`1px solid ${T.line}`, borderRadius:6, color:T.faint,
-              padding:"4px 10px", fontSize:11, cursor:"pointer"}}>
+              background:"transparent", border:`1px solid ${T.line}`, borderRadius:8, color:T.faint,
+              padding:"5px 12px", fontSize:11, cursor:"pointer", fontFamily:SANS}}>
               ← {freePlay ? "Back" : "Change key"}
             </button>
           </div>
@@ -3607,41 +3599,40 @@ export default function App() {
 
         {/* ── MOOD SCREEN ── */}
         {screen === "mood" && (
-          <div style={{marginTop:24}}>
+          <div style={{marginTop:36}}>
             <ProgressionOfTheDay
               audioCtxRef={audioCtxRef}
               onLoad={loadPOTD}
               capo={capo}
               onSave={saveProgression}
             />
-            <div style={{fontFamily:SERIF, fontSize:20, fontWeight:700, marginBottom:4}}>What mood are you going for?</div>
-            <div style={{fontSize:13, color:T.faint, marginBottom:18, fontStyle:"italic", fontFamily:ITAL}}>Pick a vibe or choose your own key below.</div>
-            <div style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:9, marginBottom:9}}>
+            <div style={{fontFamily:SERIF, fontSize:20, fontWeight:700, marginBottom:10, letterSpacing:0.1}}>What mood are you going for?</div>
+            <div style={{fontSize:12, color:T.faint, marginBottom:28, fontStyle:"italic", fontFamily:ITAL, opacity:0.75}}>Pick a vibe or choose your own key below.</div>
+            <div style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:11, marginBottom:16}}>
               {MOODS.map(m => (
                 <button key={m.label} onClick={() => selectMood(m)} style={{
-                  background:T.card, border:`1px solid rgba(255,255,255,0.07)`,
-                  borderRadius:12, padding:"13px 11px", color:T.text, textAlign:"left", cursor:"pointer"}}>
-                  <div style={{fontSize:20, marginBottom:3}}>{m.emoji}</div>
-                  <div style={{fontFamily:SERIF, fontSize:13, fontWeight:700}}>{m.label}</div>
-                  <div style={{fontSize:11, color:T.faint, marginTop:1}}>{dn(m.key)} {m.mode}</div>
+                  background:T.card, border:`1px solid rgba(255,255,255,0.06)`,
+                  borderRadius:14, padding:"22px 18px 18px", color:T.text, textAlign:"left", cursor:"pointer",
+                  transition:"border-color 0.15s"}}>
+                  <div style={{fontFamily:SERIF, fontSize:15, fontWeight:700, letterSpacing:0.2, marginBottom:8}}>{m.label}</div>
+                  <div style={{fontSize:10, color:T.faint, letterSpacing:1.5, textTransform:"uppercase", opacity:0.8}}>{dn(m.key)} {m.mode}</div>
                 </button>
               ))}
             </div>
             {/* Free Play */}
             <button onClick={enterFreePlay} style={{
-              width:"100%", padding:"14px 16px", marginBottom:7, textAlign:"left",
-              background:`linear-gradient(135deg, rgba(217,154,61,0.10), rgba(142,68,173,0.10))`,
-              border:`1px solid rgba(217,154,61,0.28)`,
-              borderRadius:12, color:T.text, cursor:"pointer", display:"flex", alignItems:"center", gap:12}}>
-              <div style={{fontSize:22, lineHeight:1}}>🎲</div>
+              width:"100%", padding:"16px 18px", marginBottom:14, textAlign:"left",
+              background:`rgba(201,145,58,0.07)`,
+              border:`1px solid rgba(201,145,58,0.28)`,
+              borderRadius:13, color:T.text, cursor:"pointer", display:"flex", alignItems:"center", gap:14}}>
               <div>
                 <div style={{fontFamily:SERIF, fontSize:14, fontWeight:700}}>Free Play</div>
-                <div style={{fontSize:11, color:T.faint, marginTop:1}}>Explore any chord from any root — no key, no rules</div>
+                <div style={{fontSize:11, color:T.faint, marginTop:3, opacity:0.75}}>Explore any chord from any root — no key, no rules</div>
               </div>
-              <div style={{marginLeft:"auto", fontSize:16, color:T.amber, opacity:0.7}}>→</div>
+              <div style={{marginLeft:"auto", fontSize:16, color:T.amber, opacity:0.55}}>→</div>
             </button>
             <button onClick={() => setCustomKey(!customKey)} style={{
-              width:"100%", padding:"11px 0", background:T.card, border:`1px solid ${T.lineSoft}`,
+              width:"100%", padding:"12px 0", background:T.card, border:`1px solid ${T.lineSoft}`,
               borderRadius:10, color:T.dim, fontSize:13, cursor:"pointer"}}>
               {customKey ? "▾" : "▸"} Choose any key manually
             </button>
@@ -3678,20 +3669,20 @@ export default function App() {
 
         {/* ── BUILD SCREEN ── */}
         {screen === "build" && (
-          <div style={{marginTop:14}}>
+          <div style={{marginTop:22}}>
 
             {/* Capo */}
-            <div style={{marginBottom:10}}>
+            <div style={{marginBottom:14}}>
               <CapoStrip capo={capo} setCapo={setCapo} keyRoot={key} mode={mode}/>
             </div>
 
             {/* Timeline */}
-            <div style={{marginBottom:10}}>
-              <div style={{display:"flex", justifyContent:"space-between", alignItems:"baseline", marginBottom:7}}>
-                <div style={{fontSize:9.5, letterSpacing:3, color:T.faint, textTransform:"uppercase"}}>Timeline</div>
+            <div style={{marginBottom:16}}>
+              <div style={{display:"flex", justifyContent:"space-between", alignItems:"baseline", marginBottom:9}}>
+                <div style={{fontSize:9, letterSpacing:2.5, color:T.faint, textTransform:"uppercase", opacity:0.7}}>Timeline</div>
                 {progression.length > 0 && (
-                  <div style={{fontSize:10, color:T.faint, fontFamily:ITAL, fontStyle:"italic"}}>
-                    tap a block to preview · tap again for shapes · tap bars to resize
+                  <div style={{fontSize:9.5, color:T.faint, fontFamily:ITAL, fontStyle:"italic", opacity:0.6}}>
+                    tap to preview · tap again for shapes
                   </div>
                 )}
               </div>
@@ -3704,21 +3695,21 @@ export default function App() {
             </div>
 
             {/* Transport */}
-            <div style={{marginBottom:10}}>
+            <div style={{marginBottom:16}}>
               <Transport isPlaying={isPlaying} onPlay={play} onStop={stop}
                 bpm={bpm} setBpm={setBpm} onTap={handleTap} tapFlash={tapFlash}
                 hasChords={progression.length > 0}/>
             </div>
 
             {/* Backing track */}
-            <div style={{marginBottom:16}}>
+            <div style={{marginBottom:22}}>
               <BackingPanel backing={backing} setBacking={setBacking}
                 onVolume={onVolume} audioCtxRef={audioCtxRef} isPlaying={isPlaying}/>
             </div>
 
             {/* Spice One Chord + Why This Works — timeline actions */}
             {progression.length > 0 && (
-              <div style={{marginBottom:14}}>
+              <div style={{marginBottom:20}}>
                 <SpiceOneChord
                   progression={progression}
                   keyRoot={key} mode={mode}
@@ -3730,10 +3721,10 @@ export default function App() {
             )}
 
             {/* Tabs */}
-            <div style={{display:"flex", gap:0, marginBottom:18, background:T.card, borderRadius:10, padding:3, border:`1px solid ${T.lineSoft}`}}>
+            <div style={{display:"flex", gap:0, marginBottom:24, background:T.card, borderRadius:12, padding:3, border:`1px solid ${T.lineSoft}`}}>
               {[{id:"build",label:"Build"},{id:"library",label:"Library"},{id:"generate",label:"Generate"},{id:"solo",label:"Solo"},{id:"decode",label:"Decode"},{id:"saved",label:"Saved"}].map(t => (
                 <button key={t.id} onClick={() => setTab(t.id)} style={{
-                  flex:1, padding:"8px 0", borderRadius:8, border:"none",
+                  flex:1, padding:"8px 0", borderRadius:10, border:"none",
                   background: tab === t.id ? T.amberSoft : "transparent",
                   color: tab === t.id ? T.amberBright : T.faint,
                   fontSize:11.5, cursor:"pointer", fontWeight: tab === t.id ? 600 : 400,
@@ -3779,8 +3770,8 @@ export default function App() {
                     chordRole="Chord Library"
                   />
                 ) : (<>
-                <div style={{fontSize:9.5, letterSpacing:3, color:T.faint, textTransform:"uppercase", marginBottom:10}}>
-                  {dn(key)} {mode} · ▶ hear it · ⬡ shapes &amp; spice · + add to timeline
+                <div style={{fontSize:9, letterSpacing:2, color:T.faint, marginBottom:14, opacity:0.55}}>
+                  {dn(key)} {mode} &nbsp;·&nbsp; hear · shapes · add
                 </div>
                 {chords.map(chord => {
                   const colors = qColors(chord.quality);
@@ -3790,12 +3781,12 @@ export default function App() {
                       <div style={{background:colors.bg, padding:"10px 12px", display:"flex", alignItems:"center", gap:8}}>
                         <div style={{width:7, height:7, borderRadius:"50%", background:colors.dot, flexShrink:0}}/>
                         <div style={{minWidth:70}}>
-                          <span style={{fontFamily:SERIF, fontSize:16, fontWeight:700}}>{dn(chord.root)}{chord.quality === "min" ? "m" : chord.quality === "dim" ? "dim" : ""}</span>
-                          <span style={{fontSize:10, color:T.faint, marginLeft:5}}>{chord.numeral}</span>
+                          <span style={{fontFamily:SERIF, fontSize:17, fontWeight:700}}>{dn(chord.root)}{chord.quality === "min" ? "m" : chord.quality === "dim" ? "dim" : ""}</span>
+                          <span style={{fontSize:9.5, color:T.faint, marginLeft:6, opacity:0.7}}>{chord.numeral}</span>
                         </div>
                         <div style={{flex:1}}>
-                          <div style={{fontSize:11, color:T.dim, fontWeight:600}}>{chord.role}</div>
-                          <div style={{fontSize:11, color:T.faint, fontStyle:"italic", fontFamily:ITAL}}>{chord.feel}</div>
+                          <div style={{fontSize:11, color:T.dim, fontWeight:500}}>{chord.role}</div>
+                          <div style={{fontSize:10.5, color:T.faint, fontStyle:"italic", fontFamily:ITAL, opacity:0.8}}>{chord.feel}</div>
                         </div>
                         <div style={{display:"flex", gap:5}}>
                           <button onClick={() => playChord(chord.name, audioCtxRef)} style={{
@@ -3818,7 +3809,7 @@ export default function App() {
                               background:"rgba(255,255,255,0.04)", border:`1px solid ${colors.border}`, borderRadius:6,
                               padding:"3px 9px", color:T.dim, fontSize:12, cursor:"pointer"}}>
                               <span style={{fontFamily:SERIF, fontWeight:700}}>{vName}</span>
-                              <span style={{fontSize:10, color:T.faint, marginLeft:5}}>{VARIANT_FEEL[v]}</span>
+                              <span style={{fontSize:9.5, color:T.faint, marginLeft:5, opacity:0.7}}>{VARIANT_FEEL[v]}</span>
                             </button>
                           );
                         })}
@@ -3847,18 +3838,18 @@ export default function App() {
             {/* ── TAB: LIBRARY ── */}
             {tab === "library" && (
               <div>
-                <div style={{fontSize:13, color:T.faint, fontStyle:"italic", fontFamily:ITAL, marginBottom:16}}>
+                <div style={{fontSize:12, color:T.faint, fontStyle:"italic", fontFamily:ITAL, marginBottom:20, opacity:0.75}}>
                   Classic progressions adapted to {dn(key)} {mode}. Tap to load.
                 </div>
                 {COMMON_PROGRESSIONS.map((prog, i) => (
                   <button key={i} onClick={() => loadCommonProgression(prog)} style={{
                     width:"100%", background:T.card, border:`1px solid ${T.lineSoft}`,
-                    borderRadius:10, padding:"12px 14px", marginBottom:8, cursor:"pointer", textAlign:"left", color:T.text}}>
+                    borderRadius:11, padding:"14px 16px", marginBottom:9, cursor:"pointer", textAlign:"left", color:T.text}}>
                     <div style={{display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:8}}>
                       <div>
-                        <div style={{fontFamily:SERIF, fontSize:15, fontWeight:700, marginBottom:2}}>{prog.name}</div>
-                        <div style={{fontSize:12, color:T.dim, fontStyle:"italic", fontFamily:ITAL, marginBottom:4}}>{prog.desc}</div>
-                        <div style={{fontSize:11, color:T.faint}}>e.g. {prog.examples}</div>
+                        <div style={{fontFamily:SERIF, fontSize:16, fontWeight:700, marginBottom:4}}>{prog.name}</div>
+                        <div style={{fontSize:12, color:T.dim, fontStyle:"italic", fontFamily:ITAL, marginBottom:5}}>{prog.desc}</div>
+                        <div style={{fontSize:10.5, color:T.faint, opacity:0.75}}>e.g. {prog.examples}</div>
                       </div>
                       <div style={{background:T.amberSoft, border:`1px solid ${T.amberBorder}`, borderRadius:6,
                         padding:"4px 10px", fontSize:11, color:T.amberBright, flexShrink:0}}>
@@ -3902,19 +3893,19 @@ export default function App() {
                 )}
 
                 {/* Scale overlay */}
-                <div style={{fontSize:9.5, letterSpacing:3, color:T.faint, textTransform:"uppercase", marginBottom:8}}>Scale overlay</div>
-                <div style={{display:"flex", flexWrap:"wrap", gap:5, marginBottom:12}}>
+                <div style={{fontSize:9, letterSpacing:2.5, color:T.faint, textTransform:"uppercase", marginBottom:10, opacity:0.65}}>Scale</div>
+                <div style={{display:"flex", flexWrap:"wrap", gap:5, marginBottom:16}}>
                   {Object.keys(PENTA_INTERVALS).map(s => (
                     <button key={s} onClick={() => setActiveScale(s)} style={{
                       padding:"4px 10px", borderRadius:6, fontSize:11,
                       border:`1px solid ${activeScale === s ? T.penta : T.lineSoft}`,
-                      background: activeScale === s ? "rgba(100,148,216,0.14)" : "rgba(255,255,255,0.02)",
+                      background: activeScale === s ? "rgba(90,133,196,0.14)" : "rgba(255,255,255,0.02)",
                       color: activeScale === s ? T.penta : T.faint, cursor:"pointer"}}>{s}</button>
                   ))}
                 </div>
 
                 {/* View window */}
-                <div style={{fontSize:9.5, letterSpacing:3, color:T.faint, textTransform:"uppercase", marginBottom:8}}>View</div>
+                <div style={{fontSize:9, letterSpacing:2.5, color:T.faint, textTransform:"uppercase", marginBottom:10, opacity:0.65}}>View</div>
                 <div style={{display:"flex", flexWrap:"wrap", gap:5, marginBottom:10}}>
                   {Object.keys(VIEWS).map(p => (
                     <button key={p} onClick={() => { setView(p); setPentaPos(0); }} style={{
@@ -3926,8 +3917,8 @@ export default function App() {
                 </div>
 
                 {/* CAGED pentatonic boxes */}
-                <div style={{display:"flex", alignItems:"center", gap:8, marginBottom:8, flexWrap:"wrap"}}>
-                  <div style={{fontSize:9.5, letterSpacing:3, color:T.faint, textTransform:"uppercase"}}>Penta box</div>
+                <div style={{display:"flex", alignItems:"center", gap:8, marginBottom:10, flexWrap:"wrap"}}>
+                  <div style={{fontSize:9, letterSpacing:2.5, color:T.faint, textTransform:"uppercase", opacity:0.65}}>Position</div>
                   <div style={{display:"flex", gap:5}}>
                     {[0,1,2,3,4,5].map(p => (
                       <button key={p} onClick={() => setPentaPos(p)} style={{
@@ -3981,8 +3972,8 @@ export default function App() {
             {/* ── TAB: SAVED ── */}
             {tab === "saved" && (
               <div>
-                <div style={{fontFamily:SERIF, fontSize:20, fontWeight:700, marginBottom:4}}>My Progressions</div>
-                <div style={{fontSize:13, color:T.faint, marginBottom:16, fontStyle:"italic", fontFamily:ITAL}}>
+                <div style={{fontFamily:SERIF, fontSize:20, fontWeight:700, marginBottom:10, letterSpacing:0.1}}>My Progressions</div>
+                <div style={{fontSize:12, color:T.faint, marginBottom:22, fontStyle:"italic", fontFamily:ITAL, opacity:0.75}}>
                   Your personal library — save from anywhere with ♥ Save.
                 </div>
                 <SavedProgressions
